@@ -1,6 +1,12 @@
 {
-  "name": "ts-project",
+  "name": "react-netease-player",
+  "version": "1.0.1",
+  "description": "一个React大作业项目",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wyyreact-hust/netease-music-player.git"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -8,6 +14,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@mui/icons-material": "^5.2.5",
+    "@mui/material": "^5.2.5",
     "next": "12.0.7",
     "react": "17.0.2",
     "react-dom": "17.0.2"
