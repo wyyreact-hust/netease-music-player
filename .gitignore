@@ -39,3 +39,6 @@ yarn-error.log*
 #conflict lockfile
 package-lock.json
 *.lock
+
+#vscode config
+/.vscode
