@@ -1,5 +1,8 @@
 {
+<<<<<<< HEAD
     "css.validate": false,
     "less.validate": false,
     "scss.validate": false
+=======
+>>>>>>> ded4c72df9018d07b8b424ff4fdfaeb91f5096e7
 }
