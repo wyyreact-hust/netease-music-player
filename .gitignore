@@ -35,3 +35,10 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+#conflict lockfile
+package-lock.json
+*.lock
+
+#vscode config
+.vscode/
