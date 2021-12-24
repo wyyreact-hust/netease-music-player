@@ -3,7 +3,7 @@ import { ISonglist } from '../../api/types/business'
 
 import { formatDatetime } from '../../helpers/time'
 import { formatNum } from '../../helpers/num'
-import styles from './index.module.css'
+import styles from './style.module.css'
 
 interface IProps {
   data?: ISonglist
