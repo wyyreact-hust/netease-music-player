@@ -1,0 +1,2 @@
+@value colors: '~styles/colors.module.css';
+@value red from colors;
