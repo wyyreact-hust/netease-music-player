@@ -1,8 +1,8 @@
 import React from 'react'
-import { ISonglist } from '../../api/types/business'
+import { ISonglist } from '../../../api/types/business'
 
-import { formatDatetime } from '../../helpers/time'
-import { formatNum } from '../../helpers/num'
+import { formatDatetime } from '../../../helpers/time'
+import { formatNum } from '../../../helpers/num'
 import styles from './style.module.css'
 
 interface IProps {

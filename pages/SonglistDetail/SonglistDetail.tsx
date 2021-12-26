@@ -6,11 +6,11 @@ import { message } from '@mui/Notification'
 
 import Tabs from '../components/Tabs'
 import MusicList from '../components/MusicList'
-import BasicInfo from './BasicInfo'
-import { createMusic } from 'helpers/business'
-import { getSonglistDetail } from 'graphql/music'
-import { IMusic } from 'apis/types/business'
-import { PlayMusicDispatchContext, ACTIONS } from 'reducers/playMusic'
+import BasicInfo from './BasicInfo/basicInfo'
+import { createMusic } from '../helpers/business'
+import { getSonglistDetail } from '../graphql/music'
+import { IMusic } from '../api/types/business'
+import { PlayMusicDispatchContext, ACTIONS } from '../reducers/Music_Play'
 import styles from './style.module.css'
 
 const { useEffect, useContext } = React
@@ -32,7 +32,7 @@ const SonglistDetail = () => {
   const { songlistId } = params
 
   const [getSonglistDetailGql, { loading, data }] = useLazyQuery(getSonglistDetail, {
-    onError: (error) => {
+    onError: (error: { message: any }) => {
       message.error(error.message)
     },
   })
