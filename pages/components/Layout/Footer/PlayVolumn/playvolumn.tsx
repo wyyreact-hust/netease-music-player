@@ -1,7 +1,7 @@
 import React from 'react'
 import { Icon } from '@blueprintjs/core'
 
-import ProgressBar from 'components/ProgressBar'
+import ProgressBar from '../../../ProgressBar/progressbar'
 import { AudioContext } from '../../../../reducers/Music_Play'
 import styles from './style.module.css'
 
