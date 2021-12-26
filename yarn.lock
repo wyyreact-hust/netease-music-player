@@ -979,23 +979,6 @@
   "resolved" "https://registry.nlark.com/callsites/download/callsites-3.1.0.tgz"
   "version" "3.1.0"
 
-<<<<<<< HEAD
-"camelcase-keys@^6.2.2":
-  "integrity" "sha1-XnVda6UaoiPsfT1S8ld4IQ+dw8A="
-  "resolved" "https://registry.npmmirror.com/camelcase-keys/download/camelcase-keys-6.2.2.tgz?cache=0&sync_timestamp=1633332959770&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fcamelcase-keys%2Fdownload%2Fcamelcase-keys-6.2.2.tgz"
-  "version" "6.2.2"
-  dependencies:
-    "camelcase" "^5.3.1"
-    "map-obj" "^4.0.0"
-    "quick-lru" "^4.0.1"
-
-"camelcase@^5.3.1":
-  "integrity" "sha1-48mzFWnhBoEd8kL3FXJaH0xJQyA="
-  "resolved" "https://registry.npmmirror.com/camelcase/download/camelcase-5.3.1.tgz?cache=0&sync_timestamp=1636945380091&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fcamelcase%2Fdownload%2Fcamelcase-5.3.1.tgz"
-  "version" "5.3.1"
-
-=======
->>>>>>> master
 "caniuse-lite@^1.0.30001202", "caniuse-lite@^1.0.30001219", "caniuse-lite@^1.0.30001228", "caniuse-lite@^1.0.30001286":
   "integrity" "sha512-4udbs9bc0hfNrcje++AxBuc6PfLNHwh3PO9kbwnfCQWyqtlzg3py0YgFu8jyRTTo85VAz4U+VLxSlID09vNtWA=="
   "resolved" "https://registry.npmmirror.com/caniuse-lite/download/caniuse-lite-1.0.30001287.tgz"
