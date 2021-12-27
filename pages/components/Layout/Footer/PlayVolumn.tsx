@@ -1,9 +1,9 @@
 import React from 'react'
-import { Icon } from '@blueprintjs/core'
-
-import ProgressBar from '../../../ProgressBar/progressbar'
-import { AudioContext } from '../../../../reducers/Music_Play'
+import VolumeOffIcon from '@mui/icons-material/VolumeOff';
+import ProgressBar from '../../ProgressBar/progressbar'
+import { AudioContext } from '../../../reducers/Music_Play'
 import styles from './style.module.css'
+import VolumeMute from '@mui/icons-material/VolumeMute';
 
 const { useContext, useMemo, useCallback } = React
 
@@ -25,7 +25,7 @@ const PlayVolume = () => {
 
   return (
     <div className={styles.root}>
-      <Icon icon='volume-off' />
+      <VolumeMute />
       <div className={styles.progress}>
         <ProgressBar className={styles.bar} originDonePercent={originDonePercent} onBarClick={handleBarClick} />
       </div>

@@ -1,3 +1,4 @@
+/* stylelint-disable string-quotes */
 @value colors: "~styles/colors.module.css";
 @value borderColor, nameColor, nameHoverColor, tipsHoverColor from colors;
 

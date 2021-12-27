@@ -1,7 +1,7 @@
 import React from 'react'
-import { Icon } from '@blueprintjs/core'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import cn from 'classnames'
+import SearchIcon from '@mui/icons-material/Search';
 
 import Words from './Words/words'
 import SearchResult from './SearchResult/searchResult'
@@ -17,7 +17,7 @@ import styles from './style.module.css'
 const { useEffect, useState, useMemo, useRef } = React
 
 const Searcher = () => {
-  const history = useHistory()
+  const history = useNavigate()
   const query = useQuery()
   const searchRef = useRef<HTMLDivElement | null>(null)
   const inputRef = useRef<HTMLInputElement | null>(null)
@@ -42,8 +42,8 @@ const Searcher = () => {
     }
   }
 
-  const go2SearchPage = (word: string) => {
-    history.push(`${ROUTES.SEARCH}?keyword=${word}`)
+  const goToSearchPage = (word: string) => {
+    history(`${ROUTES.SEARCH}?keyword=${word}`)
     setSearchHistory(word)
     setShowResult(false)
     inputRef.current?.blur()
@@ -54,12 +54,12 @@ const Searcher = () => {
       if (!keyword.trim()) {
         return
       }
-      go2SearchPage(keyword)
+      goToSearchPage(keyword)
     }
   }
 
   const handleWordClick = (word: string) => {
-    go2SearchPage(word)
+    goToSearchPage(word)
     setKeyword(word)
   }
 
@@ -69,7 +69,7 @@ const Searcher = () => {
   return (
     <div className={styles.root} ref={(ref) => (searchRef.current = ref)}>
       <div className={styles.searcher}>
-        <Icon icon='search' />
+        <SearchIcon />
         <input
           ref={(ref) => (inputRef.current = ref)}
           placeholder='搜索'

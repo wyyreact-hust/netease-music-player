@@ -1,15 +1,16 @@
-@value constants: "~styles/constants.module.css";
+@value constants: '~styles/constants.module.css';
 @value footerHeight, headerHeight from constants;
-@value colors: "~styles/colors.module.css";
+
+@value colors: '~styles/colors.module.css';
 @value tipsColor, borderColor from colors;
 
 .root {
   width: 380px;
-  height: calc(100% - headerheight - footerheight);
+  height: calc(100% - headerHeight - footerHeight);
   position: fixed;
-  top: headerheight;
+  top: headerHeight;
   right: 0;
-  border-left: 1px solid bordercolor;
+  border-left: 1px solid borderColor;
   box-shadow: 0 0 5px #fff;
   background-color: #fff;
   transform: translate(100%, 0);
@@ -25,7 +26,7 @@
   margin: 20px auto;
   display: flex;
   align-items: center;
-  border: 1px solid tipscolor;
+  border: 1px solid tipsColor;
   border-radius: 20px;
 
   .tab {
@@ -38,14 +39,14 @@
     cursor: pointer;
 
     &:hover {
-      background-color: bordercolor;
+      background-color: borderColor;
     }
   }
 
   .active,
   .active:hover {
     color: #fff;
-    background-color: tipscolor;
+    background-color: tipsColor;
   }
 }
 

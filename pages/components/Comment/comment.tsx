@@ -1,5 +1,5 @@
 import React from 'react'
-import { Icon } from '@blueprintjs/core'
+import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import cn from 'classnames'
 
 import { IComment } from '../../api/types/comment'
@@ -45,7 +45,7 @@ const Comment: React.FC<IProps> = ({ data, onLikeChange }) => {
           <div className={styles.time}>{formatDatetime(time, true)}</div>
           <div className={styles.operations}>
             <div className={cn(styles.like, liked && 'active')} onClick={likeUnlike}>
-              <Icon icon='thumbs-up' iconSize={14} />
+              <ThumbUpIcon />
               &nbsp;
               {!!likedCount && <span>{likedCount}</span>}
             </div>

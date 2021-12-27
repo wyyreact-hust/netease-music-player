@@ -1,16 +1,19 @@
 import React from 'react'
-import { Icon, Tooltip } from '@blueprintjs/core'
 import cn from 'classnames'
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import MenuIcon from '@mui/icons-material/Menu';
+import Image from 'next/image';
+import { Tooltip } from '@mui/material';
 
-import Artists from '../../Artists/Artists'
-import AudioTimer from './AudioTimer/AudioTimer'
-import ProgressBar from './ProgressBar/ProgressBar'
-import PlayRecord from './PlayRecord/playrecord'
-import PlayMode from './PlayMode/PlayMode'
-import PlayOperations from './PlayOperations/playoperations'
-import PlayVolume from './PlayVolumn/playvolumn'
-import { PlayMusicStateContext, PlayMusicDispatchContext, ACTIONS } from '../../../reducers/Music_Play'
-import styles from './style.module.css'
+import Artists from '../../Artists/Artists' //获取作者名
+import AudioTimer from './AudioTimer' //获取播放时间
+import ProgressBar from './ProgressBar' //获取进度条组件
+import PlayRecord from './PlayRecord/playrecord' //获取播放记录组件
+import PlayMode from './PlayMode' //获取播放模式组件
+import PlayOperations from './PlayOperations/playoperations' //获取播放控制组件
+import PlayVolume from './playvolumn' //获取音量控制组件
+import { PlayMusicStateContext, PlayMusicDispatchContext, ACTIONS } from '../../../reducers/Music_Play' //获取音乐播放组件
+import styles from './Footer.module.css'
 
 const { useContext, useState, useCallback } = React
 
@@ -51,12 +54,12 @@ const Footer = () => {
               <img src={music?.picUrl ? `${music?.picUrl}?param=40y40` : undefined} loading='lazy' />
               {!showLyric && (
                 <div className={styles.mask} onClick={handleShowLyric}>
-                  <Icon icon='double-chevron-up' />
+                  <KeyboardArrowUpIcon />
                 </div>
               )}
               {showLyric && (
                 <div className={cn(styles.mask, styles.hideLyric)} onClick={handleHideLyric}>
-                  <Icon icon='double-chevron-down' />
+                  <KeyboardArrowUpIcon />
                 </div>
               )}
             </div>
@@ -82,8 +85,8 @@ const Footer = () => {
           <PlayMode />
         </div>
         <div onClick={togglePlayRecord} className={styles.item}>
-          <Tooltip content='打开播放列表'>
-            <Icon icon='menu-closed' className={showPlayRecord ? 'active' : ''} />
+          <Tooltip title='打开播放列表'>
+            <MenuIcon className={showPlayRecord ? 'active' : ''} />
           </Tooltip>
         </div>
         <div className={styles.item}>
