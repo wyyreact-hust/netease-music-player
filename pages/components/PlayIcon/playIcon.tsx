@@ -1,7 +1,6 @@
 import React from 'react'
-import { Icon } from '@blueprintjs/core'
 import cn from 'classnames'
-
+import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 import styles from './style.module.css'
 
 interface IProps {
@@ -11,7 +10,7 @@ interface IProps {
 const PlayIcon: React.FC<IProps> = ({ className }) => {
   return (
     <div className={cn(styles.root, className)}>
-      <Icon icon='play' />
+      <PlayCircleIcon/>
     </div>
   )
 }

@@ -1,8 +1,7 @@
 import React from 'react'
-import { Spinner } from '@blueprintjs/core'
 import { useParams } from 'react-router-dom'
 import { useLazyQuery } from '@apollo/client'
-import { message } from '@mui/Notification'
+
 
 import Tabs from '../../components/Tabs'
 import MusicList from '../../components/MusicList'
@@ -12,7 +11,7 @@ import { getSonglistDetail } from '../../graphql/music'
 import { IMusic } from '../../api/types/business'
 import { PlayMusicDispatchContext, ACTIONS } from '../../reducers/Music_Play'
 import styles from './style.module.css'
-
+import CircularProgress from '@mui/material/CircularProgress';
 const { useEffect, useContext } = React
 
 const TABS = [
@@ -33,7 +32,7 @@ const SonglistDetail = () => {
 
   const [getSonglistDetailGql, { loading, data }] = useLazyQuery(getSonglistDetail, {
     onError: (error: { message: any }) => {
-      message.error(error.message)
+      alert(error.message)
     },
   })
 
@@ -77,7 +76,7 @@ const SonglistDetail = () => {
   return (
     <div className={styles.root}>
       {loading ? (
-        <Spinner className='spinner' />
+        <CircularProgress/>
       ) : (
         <>
           <div className={styles.basicInfo}>
