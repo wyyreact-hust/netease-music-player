@@ -1,5 +1,6 @@
 import React from 'react'
-import { Icon } from '@blueprintjs/core'
+import { VolumeOff, VolumeUp } from '@mui/icons-material';
+import GradeIcon from '@mui/icons-material/Grade';
 import cn from 'classnames'
 
 import Table, { IColumn } from '../Table/table'
@@ -38,7 +39,7 @@ const MusicList: React.FC<IProps> = ({ data, onPlayAll }) => {
             ) : (
               <span className={styles.index}>{(index || 0) + 1}</span>
             )}
-            <Icon icon='import' iconSize={14} />
+            <GradeIcon fontSize='small'/>
           </div>
         )
       },

@@ -1,6 +1,6 @@
 import React from 'react'
 import { ISonglist } from '../../../api/types/business'
-
+import Image from 'next/image';
 import { formatDatetime } from '../../../helpers/time'
 import { formatNum } from '../../../helpers/num'
 import styles from './style.module.css'
@@ -14,7 +14,7 @@ const BasicInfo: React.FC<IProps> = ({ data, onPlayAll }) => {
   return (
     <div className={styles.root}>
       <div className={styles.pic}>
-        {data?.coverImgUrl && <img src={data?.coverImgUrl} className='cover' loading='lazy' />}
+        {data?.coverImgUrl && <Image src={data?.coverImgUrl} alt="" className='cover' loading='lazy' />}
       </div>
 
       <div className={styles.info}>
@@ -25,7 +25,7 @@ const BasicInfo: React.FC<IProps> = ({ data, onPlayAll }) => {
 
         <div className={styles.creator}>
           <div className={styles.avatar}>
-            {data?.creator?.avatarUrl && <img src={`${data?.creator?.avatarUrl}?param=25y25`} loading='lazy' />}
+            {data?.creator?.avatarUrl && <Image src={`${data?.creator?.avatarUrl}?param=25y25`} alt="" loading='lazy' />}
           </div>
           <div className={styles.name}>{data?.creator.nickname}</div>
           <div>{formatDatetime(data?.createTime)}创建</div>
