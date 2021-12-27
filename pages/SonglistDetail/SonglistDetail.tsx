@@ -1,7 +1,7 @@
 import React from 'react'
 import { Spinner } from '@blueprintjs/core'
 import { useParams } from 'react-router-dom'
-import { useLazyQuery } from '@apollo/client'
+import { useLazyQuery } from 'react-apollo'
 import { message } from '@mui/Notification'
 
 import Tabs from '../components/Tabs'
