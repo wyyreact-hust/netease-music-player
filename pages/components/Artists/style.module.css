@@ -1,0 +1,22 @@
+@value colors: "~styles/colors.module.css";
+@value tipsColor, tipsHoverColor from colors;
+
+.root {
+  display: flex;
+  align-items: center;
+  color: var(tipsColor);
+}
+
+.singer {
+  margin-top: 5px;
+  font-size: 0.9em;
+  cursor: pointer;
+
+  &:hover {
+    color: var(tipsHoverColor);
+  }
+}
+
+.slash {
+  margin: 0 5px;
+}
