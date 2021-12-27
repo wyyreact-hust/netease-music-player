@@ -41,7 +41,11 @@ package-lock.json
 yarn.lock
 
 #vscode config
+<<<<<<< HEAD
+.vscode/
+=======
 /.vscode
 /.vscode/
 .vscode/
 .vscode/settings.json
+>>>>>>> origin/kirito

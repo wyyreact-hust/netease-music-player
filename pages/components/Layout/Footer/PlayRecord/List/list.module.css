@@ -1,0 +1,52 @@
+@value colors: "~styles/colors.module.css";
+@value tipsColor, borderColor, nameHoverColor, nameColor from colors;
+
+.name {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+
+  .icon {
+    margin: 0 3px 0 -15px;
+  }
+
+  .text {
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-right: 5px;
+    }
+  }
+}
+
+.header {
+  margin: 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid bordercolor;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .count {
+    color: tipscolor;
+  }
+
+  .actions {
+    cursor: pointer;
+    color: namecolor;
+
+    &:hover {
+      color: namehovercolor;
+    }
+  }
+}
+
+.list {
+  height: calc(100% - 27px);
+  overflow: scroll;
+}
+
+.icon {
+  font-size: 14px;
+}

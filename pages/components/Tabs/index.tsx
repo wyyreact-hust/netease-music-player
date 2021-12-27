@@ -1,6 +1,6 @@
 import React from 'react'
 import cn from 'classnames'
-import { noop } from 'helpers/fn'
+import { noop } from '../../helpers/fn'
 import styles from './style.module.css'
 interface ITab {
     label?: string
