@@ -1,7 +1,7 @@
-import { gql } from '@apollo/client'
+import { graphql } from 'react-apollo'
 
-export const getSonglistDetail = gql`
-  query GetSonglistDetail($id: String!) {
+export const getSonglistDetail = graphql.caller`
+  query GetSonglistDetail($id: String) {
     getSonglistDetail(id: $id) {
       songlist {
         id
